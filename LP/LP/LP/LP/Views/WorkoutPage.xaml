@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="LP.Views.WorkoutPage"            
+             Title="Full Body Workout">
+   
+   
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="bg1.jpg" Aspect="AspectFill"></Image>
+            <Frame OutlineColor="Black"  BackgroundColor="#66232323" Margin="10,10,10,10">
+            
+            <ScrollView x:Name="MainScroll" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout Spacing="5" Padding="5">
+                    <Label TextColor="AliceBlue" HorizontalTextAlignment="Center" Text="ALL VALUES ARE STORED AS KG'S" FontSize="Micro"></Label>
+                    <Label TextColor="#61a1c6" Text="Squat" FontSize="Medium"  />
+                    <Entry TextColor="White" BackgroundColor="Transparent" Keyboard ="Numeric" Text="{Binding Squat}" FontSize="Small" />
+                    <Label TextColor="#61a1c6" Text="Bench Press" FontSize="Medium" />
+                    <Entry TextColor="White" BackgroundColor="Transparent" Keyboard ="Numeric" Text="{Binding Bench}" FontSize="Small" />
+                    <Label TextColor="#61a1c6" Text="Deadlift" FontSize="Medium" />
+                    <Entry TextColor="White" BackgroundColor="Transparent" Keyboard ="Numeric" Text="{Binding Deadlift}" FontSize="Small" />
+                    <Label TextColor="#61a1c6" Text="Overhead Press" FontSize="Medium" />
+                    <Entry TextColor="White" BackgroundColor="Transparent" Keyboard ="Numeric" Text="{Binding OverHead}" FontSize="Small" />
+                    <Label TextColor="#61a1c6" Text="Bicep Curl" FontSize="Medium" />
+                    <Entry TextColor="White" BackgroundColor="Transparent" Keyboard ="Numeric" Text="{Binding Bicep}" FontSize="Small" />
+                    <Label TextColor="#61a1c6" Text="Tricep Pushdown" FontSize="Medium" />
+                    <Entry TextColor="White" BackgroundColor="Transparent" Keyboard ="Numeric" Text="{Binding Tricep}" FontSize="Small" />
+                    <Button Text="Delete" Clicked="Delete_Clicked" BackgroundColor="#ba5e5e" TextColor="White"></Button>
+                </StackLayout>
+                
+            </ScrollView>
+        </Frame>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
